@@ -1,21 +1,22 @@
-import CarList from './employees/EmployeeList'
-import CarCreate from './employees/EmployeeCreate'
-import CarView from './employees/CarView'
+import EmployeeList from './employees/EmployeeList';
+import EmployeeCreate from './employees/EmployeeCreate';
+import EmployeeView from './employees/EmployeeView';
+import EmployeeEdit from './employees/EmployeeEdit';
 
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import CarEdit from './employees/EmployeeEdit';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <>
+  
       <div>
         <BrowserRouter>
           <Routes>
-            <Route path="" element={<CarList/>}/>
-            <Route path="/cars/list" element={<CarList/>}/>
-            <Route path="/cars/create" element={<CarCreate/>}/>
-            <Route path="/cars/view/:id" element={<CarView/>}/>
-            <Route path="/cars/edit/:id" element={<CarEdit/>}/>
+            <Route path="" element={<EmployeeList />} />
+            <Route path="/employees/list" element={<EmployeeList />} />
+            <Route path="/employees/create" element={<EmployeeCreate />} />
+            <Route path="/employees/view/:id" element={<EmployeeView />} />
+            <Route path="/employees/edit/:id" element={<EmployeeEdit />} />
           </Routes>
         </BrowserRouter>
       </div>
